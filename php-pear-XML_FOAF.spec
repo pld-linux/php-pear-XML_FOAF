@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - Provides the ability to manipulate FOAF RDF/XML
-#Summary(pl):	%{_pearname} -
+Summary(pl):	%{_pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{_pearname}
 Version:	0.1
 Release:	1
@@ -20,16 +20,19 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-XML_FOAF Allows advanced users to create advanced FOAF files.
-The FOAF Project can be found at http://www.foaf-project.org -
+XML_FOAF allows advanced users to create advanced FOAF files.
+The FOAF Project can be found at http://www.foaf-project.org/ -
 XML_FOAF_Parser and XML_FOAF_Lite will follow before 1.0.
 
 This class has in PEAR status: %{_status}.
 
-#%description -l pl
-#...
-#
-#Ta klasa ma w PEAR status: %{_status}.
+%description -l pl
+XML_FOAF pozwala zaawansowanym u¿ytkownikom tworzyæ zaawansowane pliki
+FOAF. Projekt FOAF znajduje siê pod adresem
+http://www.foaf-project.org/. XML_FOAF_Parser i XML_FOAF_Lite uka¿±
+siê przed 1.0.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
