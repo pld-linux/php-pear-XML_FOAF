@@ -1,10 +1,10 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          XML
-%define         _subclass       FOAF
+%define		_class		XML
+%define		_subclass	FOAF
 %define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}
 
-Summary:	%{_pearname} - Provides the ability to manipulate FOAF RDF/XML
+Summary:	%{_pearname} - provides the ability to manipulate FOAF RDF/XML
 Summary(pl):	%{_pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{_pearname}
 Version:	0.2
@@ -49,7 +49,6 @@ install %{_pearname}-%{version}/%{_subclass}/RAP/rdql/*.php $RPM_BUILD_ROOT%{php
 install %{_pearname}-%{version}/%{_subclass}/RAP/syntax/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/syntax
 install %{_pearname}-%{version}/%{_subclass}/RAP/util/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/util
 install %{_pearname}-%{version}/%{_subclass}/RAP/vocabulary/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/vocabulary
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
