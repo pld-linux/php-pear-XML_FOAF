@@ -24,7 +24,7 @@ XML_FOAF allows advanced users to create advanced FOAF files.
 The FOAF Project can be found at http://www.foaf-project.org/ -
 XML_FOAF_Parser and XML_FOAF_Lite will follow before 1.0.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 XML_FOAF pozwala zaawansowanym u¿ytkownikom tworzyæ zaawansowane pliki
