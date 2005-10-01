@@ -8,13 +8,13 @@ Summary:	%{_pearname} - provides the ability to manipulate FOAF RDF/XML
 Summary(pl):	%{_pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{_pearname}
 Version:	0.2
-Release:	2
+Release:	2.1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	fc90f044ef01832ab9c4999b1325bd71
 URL:		http://pear.php.net/package/XML_FOAF/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,26 +35,20 @@ siê przed 1.0.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/FOAF/RAP/{model,rdql,syntax,util,vocabulary}
-
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
-install %{_pearname}-%{version}/%{_subclass}/RAP/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP
-install %{_pearname}-%{version}/%{_subclass}/RAP/model/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/model
-install %{_pearname}-%{version}/%{_subclass}/RAP/rdql/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/rdql
-install %{_pearname}-%{version}/%{_subclass}/RAP/syntax/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/syntax
-install %{_pearname}-%{version}/%{_subclass}/RAP/util/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/util
-install %{_pearname}-%{version}/%{_subclass}/RAP/vocabulary/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/RAP/vocabulary
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}/docs/*
+%doc install.log
+%doc docs/%{_pearname}/docs/*
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
