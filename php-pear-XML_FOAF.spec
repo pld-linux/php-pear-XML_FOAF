@@ -8,14 +8,17 @@ Summary:	%{_pearname} - provides the ability to manipulate FOAF RDF/XML
 Summary(pl):	%{_pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{_pearname}
 Version:	0.2
-Release:	2.1
+Release:	2.2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	fc90f044ef01832ab9c4999b1325bd71
 URL:		http://pear.php.net/package/XML_FOAF/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-common >= 3:4.3.0
 Requires:	php-pear
+Requires:	php-pear-XML_Tree >= 1.1
+Requires:	php-pear-XML_Beautifier >= 0.2.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
