@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - provides the ability to manipulate FOAF RDF/XML
-Summary(pl.UTF-8):   %{_pearname} - przetwarzanie plików FOAF RDF/XML
+Summary(pl.UTF-8):	%{_pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{_pearname}
 Version:	0.2
 Release:	3
