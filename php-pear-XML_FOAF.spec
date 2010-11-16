@@ -1,17 +1,15 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		XML
-%define		_subclass	FOAF
 %define		_status		alpha
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname	XML_FOAF
 Summary:	%{_pearname} - provides the ability to manipulate FOAF RDF/XML
 Summary(pl.UTF-8):	%{_pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{_pearname}
-Version:	0.3.0
-Release:	3
+Version:	0.3.1
+Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	025dbb4d91effc8062fc9b4b9677d94c
+# Source0-md5:	575d9b2cb3de3d8d9e2db9041a434391
 URL:		http://pear.php.net/package/XML_FOAF/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -59,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}
+%{php_pear_dir}/XML/*.php
+%{php_pear_dir}/XML/FOAF
 
 %{_examplesdir}/%{name}-%{version}
