@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	XML_FOAF
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - provides the ability to manipulate FOAF RDF/XML
 Summary(pl.UTF-8):	%{pearname} - przetwarzanie plików FOAF RDF/XML
 Name:		php-pear-%{pearname}
